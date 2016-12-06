@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+        <title>Portfolio | Collection</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+
+    <body>
+        <header class="grey-text text-lighten-3">
+            <div class="navbar-fixed">
+                <ul id="taal" class="dropdown-content">
+                    <li id="taal" class="waves-effect"><a href="../nl/collectie.html">Nederlands</a></li>
+                    <li id="taal" class="waves-effect active"><a href="">English</a></li>
+                </ul>
+                <ul id="overmij" class="dropdown-content">
+                    <li id="overmij" class="waves-effect"><a href="aboutme/personalinfo.html">Info</a></li>
+                    <li id="overmij" class="waves-effect"><a href="aboutme/cv.html">CV</a></li>
+                    <li id="overmij" class="waves-effect"><a href="aboutme/whatdoiwant.html">What do I want</a></li>
+                </ul>
+
+                <nav class="blue darken-3 z-depth-2">
+                    <div class="nav-wrapper ">
+                        <a id="logo" href="#" class="waves-effect brand-logo left">Gilles V.</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect"><i class="mdi-navigation-menu"></i></a>
+                        <ul class="brand-logo center hide-on-med-and-down">
+                            <li><a class="waves-effect" href="index.html">Home</a></li>
+                            <li><a class="waves-effect dropdown-button hide-on-med-and-down" data-activates="overmij">About me<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                            <li><a class="waves-effect" href="skills.html">Skills</a></li>
+                            <li class="active"><a class="waves-effect">Collection</a></li>
+                            <li><a class="waves-effect" href="contact.html">Contact</a></li>
+                        </ul>
+                        <a id="taal" class="dropdown-button brand-logo right hide-on-med-and-down" href="#!" data-activates="taal">English<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                        <a class="collapsible-header">Language<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a href="../nl/collectie.html">Nederlands</a></li>
+                                                <li><a href="#">English</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="blue darken-3 menu">Menu</li>
+                            <li><a class="waves-effect" href="index.html">Home</a></li><li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                        <a class="collapsible-header">About me<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a href="aboutme/personalinfo.html">Info</a></li>
+                                                <li><a href="aboutme/cv.html">CV</a></li>
+                                                <li><a href="aboutme/whatdoiwant.html">What do I want</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="waves-effect" href="skills.html">Skills</a></li>
+                            <li class="active"><a class="waves-effect" href="collection.html">Collection</a></li>
+                            <li><a class="waves-effect" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Rechthoek</div>
+                        <div class="collapsible-body codebox">
+                            package domein;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class Rechthoek {
+                            private double lengte;
+                            private double breedte;
+
+                            public Rechthoek(double lengte, double breedte) {
+                            setLengte(lengte);
+                            setBreedte(breedte);
+                            }
+
+                            public double getLengte() {
+                            return lengte;
+                            }
+                            public double getBreedte() {
+                            return breedte;
+                            }
+                            public void setLengte(double lengte) {
+                            if(lengte > 0 && lengte <= 20) {
+                            this.lengte = lengte;
+                            } else {
+                            this.lengte = 1;
+                            }
+                            }
+                            public void setBreedte(double breedte) {
+                            if(breedte > 0 && breedte <= 20) {
+                            this.breedte = breedte;
+                            } else {
+                            this.breedte = 1;
+                            }
+                            }
+                            public double geefOmtrek() {
+                            return ((lengte*2) + (breedte*2));
+                            }
+                            public double geefOppervlakte() {
+                            return (lengte*breedte);
+                            }
+                            }
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>RechthoekApplicatie</div>
+                        <div class="collapsible-body codebox">
+                            package ui;
+
+                            import domein.Rechthoek;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class RechthoekApplicatie {
+                            public static void main(String[] args) {
+                            Rechthoek rechthoek1 = new Rechthoek(2, 4.5);
+                            Rechthoek rechthoek2 = new Rechthoek(-2, 6.5);
+
+                            System.out.printf("De eerste rechthoek:\nMet als lengte %.2f\nMet als breedte %.2f\nMet als omtrek %.2f\nMet als oppervlakte %.2f\n\nDe tweede rechthoek:\nMet als lengte %.2f\nMet als breedte %.2f\nMet als omtrek %.2f\nMet als oppervlakte %.2f\n",rechthoek1.getLengte(),rechthoek1.getBreedte(),rechthoek1.geefOmtrek(),rechthoek1.geefOppervlakte(),rechthoek2.getLengte(),rechthoek2.getBreedte(),rechthoek2.geefOmtrek(),rechthoek2.geefOppervlakte());
+
+                            }
+                            }
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Rechthoek2</div>
+                        <div class="collapsible-body codebox">
+                            package domein;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class Rechthoek2 {
+                            private double lengte;
+                            private double breedte;
+                            private int linkerbovenhoekX;
+                            private int linkerbovenhoekY;
+
+                            public Rechthoek2(double lengte, double breedte, int linkerbovenhoekX, int linkerbovenhoekY) {
+                            setLengte(lengte);
+                            setBreedte(breedte);
+                            setLinkerbovenhoekX(linkerbovenhoekX);
+                            setLinkerbovenhoekY(linkerbovenhoekY);
+                            }
+
+                            public double getLengte() {
+                            return lengte;
+                            }
+                            public double getBreedte() {
+                            return breedte;
+                            }
+                            public int getLinkerbovenhoekX() {
+                            return linkerbovenhoekX;
+                            }
+                            public int getLinkerbovenhoekY() {
+                            return linkerbovenhoekY;
+                            }
+                            public void setLengte(double lengte) {
+                            if(lengte > 0 && lengte <= 20) {
+                            this.lengte = lengte;
+                            } else {
+                            this.lengte = 1;
+                            }
+                            }
+                            public void setBreedte(double breedte) {
+                            if(breedte > 0 && breedte <= 20) {
+                            this.breedte = breedte;
+                            } else {
+                            this.breedte = 1;
+                            }
+                            }
+                            public void setLinkerbovenhoekX(int linkerbovenhoekX) {
+                            this.linkerbovenhoekX = linkerbovenhoekX;
+                            }
+                            public void setLinkerbovenhoekY(int linkerbovenhoekY) {
+                            this.linkerbovenhoekY = linkerbovenhoekY;
+                            }
+                            public double geefOmtrek() {
+                            return ((lengte*2) + (breedte*2));
+                            }
+                            public double geefOppervlakte() {
+                            return (lengte*breedte);
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Rechthoek2Applicatie</div>
+                        <div class="collapsible-body codebox">
+                            package ui;
+
+                            import domein.Rechthoek2;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class Rechthoek2Applicatie {
+                            public static void main(String[] args) {
+                            Rechthoek2 rechthoek = new Rechthoek2(Math.random(), Math.random(), 10, 50);
+                            System.out.printf("Coordinatenparen van de rechthoek met lengte %.2f en breedte %.2f\nLinkerbovenhoek\t\t: (%d , %d)\nLinkeronderhoek\t\t: (%d , %.2f)\nRechterbovenhoek\t: (%.2f , %d)\nRechteronderhoek\t: (%.2f , %.2f)\n", rechthoek.getLengte(), rechthoek.getBreedte(), rechthoek.getLinkerbovenhoekX(), rechthoek.getLinkerbovenhoekY(), rechthoek.getLinkerbovenhoekX(), ((double)rechthoek.getLinkerbovenhoekY() + rechthoek.getBreedte()), ((double)rechthoek.getLinkerbovenhoekX() + rechthoek.getLengte()), rechthoek.getLinkerbovenhoekY(), ((double)rechthoek.getLinkerbovenhoekX() + rechthoek.getLengte()), ((double)rechthoek.getLinkerbovenhoekY() + rechthoek.getBreedte()));
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Lid</div>
+                        <div class="collapsible-body codebox">
+                            package domein;
+
+                            import java.util.Calendar;
+                            import java.util.GregorianCalendar;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class Lid {
+                            private String naam;
+                            private int startjaar;
+                            private int categorie;
+                            private int aantalFamilieleden;
+                            private int HUIDIG_JAAR= GregorianCalendar.getInstance().get(Calendar.YEAR);
+
+                            public Lid(String naam) {
+                            this.naam = naam;
+                            }
+                            public void setNaam(String naam) {
+                            this.naam = naam;
+                            }
+                            public void setAantalFamilieleden(int aantalFamilieleden) {
+                            if(aantalFamilieleden < 0) {
+                            this.aantalFamilieleden = 0;
+                            } else {
+                            this.aantalFamilieleden = aantalFamilieleden;
+                            }
+                            }
+                            public void setCategorie(int categorie) {
+                            if(categorie <= 3 && categorie >= 1) {
+                            this.categorie = categorie;
+                            } else {
+                            this.categorie = 1;
+                            }
+                            }
+                            public void setStartjaar(int startjaar) {
+                            if(startjaar >= HUIDIG_JAAR && startjaar <= 1980) {
+                            this.startjaar = startjaar;
+                            } else {
+                            this.startjaar = HUIDIG_JAAR;
+                            }
+                            }
+                            public String getNaam() {
+                            return naam;
+                            }
+                            public int getStartjaar() {
+                            return startjaar;
+                            }
+                            public int getAantalFamilieleden() {
+                            return aantalFamilieleden;
+                            }
+                            public int getCategorie() {
+                            return categorie;
+                            }
+                            public double berekenLidgeld() {
+                            double lidgeld = 22;
+                            int aantalJaar = (HUIDIG_JAAR - startjaar);
+
+                            if(categorie == 2) {
+                            lidgeld = (lidgeld/100)*80;
+                            } else if (categorie == 3) {
+                            lidgeld = 40;
+                            }
+                            if(aantalJaar > 10) {
+                            lidgeld = (lidgeld/100)*90;
+                            } else if (aantalJaar == 1){
+                            lidgeld = (lidgeld/100)*95;
+                            }
+                            if(aantalFamilieleden > 1) {
+                            lidgeld = (lidgeld/100)*90;
+                            }
+                            return lidgeld;
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>LidApplicatie</div>
+                        <div class="collapsible-body codebox">
+                            package ui;
+
+                            import java.util.Scanner;
+                            import domein.Lid;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class LidApplicatie {
+                            public static void main(String[] args) {
+
+                            Scanner in = new Scanner(System.in);
+                            System.out.printf("Geef de naam van het lid in: ");
+                            Lid lid1 = new Lid(in.next());
+                            System.out.printf("Geef de aanvang lidjaar in: ");
+                            lid1.setStartjaar(in.nextInt());
+                            System.out.printf("Geef categorie (1, 2, 3) in: ");
+                            lid1.setCategorie(in.nextInt());
+                            System.out.printf("Geef aantal familieleden in club in: ");
+                            lid1.setAantalFamilieleden(in.nextInt());
+                            if(lid1.getAantalFamilieleden() == 1) {
+                            System.out.printf("%s is lid sinds %d, behoort tot categorie %d en heeft %d familielid in de club\nTe betalen = %.2f euro\n",lid1.getNaam(),lid1.getStartjaar(),lid1.getCategorie(),lid1.getAantalFamilieleden(),lid1.berekenLidgeld());
+                            } else {
+                            System.out.printf("%s is lid sinds %d, behoort tot categorie %d en heeft %d familieleden in de club\nTe betalen = %.2f euro\n",lid1.getNaam(),lid1.getStartjaar(),lid1.getCategorie(),lid1.getAantalFamilieleden(),lid1.berekenLidgeld());
+                            }
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>MijnGetal</div>
+                        <div class="collapsible-body codebox">
+                            package domein;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class MijnGetal {
+                            private int waarde;
+                            private String uitvoer;
+
+                            public MijnGetal(int waarde) {
+                            if(waarde > 0) {
+                            this.waarde = waarde;
+                            } else {
+                            this.waarde = 1;
+                            }
+                            }
+                            public int getWaarde() {
+                            return waarde;
+                            }
+                            public String bepaalUitvoer() {
+                            uitvoer = String.valueOf(waarde);
+
+                            while (waarde != 1) {
+                            if((waarde%2) == 0) {
+                            waarde /= 2;
+                            uitvoer = uitvoer + " " + String.valueOf(waarde);
+                            } else {
+                            waarde *= 3;
+                            waarde += 1;
+                            uitvoer = uitvoer + " " + String.valueOf(waarde);
+                            }
+                            }
+                            return uitvoer;
+                            }
+                            public String berekenDelers() {
+                            int delers = 1;
+
+                            while(delers <= (waarde/2)){ 
+                            if((waarde%delers) == 0) {
+                            uitvoer = uitvoer + ", " + String.valueOf(delers);
+                            }
+                            waarde += 1;
+                            }
+                            uitvoer = uitvoer + " en " + String.valueOf(waarde);
+                            return uitvoer;
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>H4_Oef2</div>
+                        <div class="collapsible-body codebox">
+                            package ui;
+
+                            import domein.MijnGetal;
+                            import java.util.Scanner;
+
+                            public class H4_Oef2 {
+                            public static void main(String[] args) {
+                            Scanner in = new Scanner(System.in);
+                            System.out.printf("Geef een positief, van 0 verschillend geheel getal in: ");
+                            MijnGetal getal = new MijnGetal(in.nextInt());
+                            System.out.printf("De getallenreeks is:\n%s\n",getal.bepaalUitvoer());
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Tombola</div>
+                        <div class="collapsible-body codebox">
+                            package domein;
+
+                            /************************************
+                            *                                  *
+                            *     author: Gilles Vercammen     *
+                            *                                  *
+                            ************************************/
+
+                            public class Tombola {
+                            private String verenigingnaam;
+                            private int aantalLotjes;
+                            private double prijsPerLot;
+
+                            public Tombola(String vereningsnaam,int aantalLotjes,double prijsPerLot) {
+                            this.verenigingnaam = vereningsnaam;
+                            if(aantalLotjes > 0) {
+                            this.aantalLotjes = aantalLotjes;
+                            } else {
+                            this.aantalLotjes = 0;
+                            }
+                            if(prijsPerLot > 0 && prijsPerLot <= 5) {
+                            this.prijsPerLot = prijsPerLot;
+                            } else {
+                            this.prijsPerLot = 1;
+                            }
+                            }
+                            public String getVerenigingnaam() {
+                            return verenigingnaam;
+                            }
+                            public int getAantalLotjes() {
+                            return aantalLotjes;
+                            }
+                            public double getPrijsPerLot() {
+                            return prijsPerLot;
+                            }
+                            public void setVerenigingnaam(String verenigingnaam) {
+                            this.verenigingnaam = verenigingnaam;
+                            }
+                            public void setAantalLotjes(int aantalLotjes) {
+                            this.aantalLotjes = aantalLotjes;
+                            }
+                            public void setPrijsPerLot(double prijsPerLot) {
+                            this.prijsPerLot = prijsPerLot;
+                            }
+                            public double geefPrijsVanaf5Lotjes() {
+                            double prijs = (prijsPerLot/100)*90;
+                            prijs = Math.floor(prijs * 100) / 100;
+                            return prijs;
+                            }
+                            public double geefPrijsVanaf10Lotjes() {
+                            double prijs = (prijsPerLot/100)*75;
+                            prijs = Math.floor(prijs * 1000) / 1000;
+                            return prijs;
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Oefening 1</div>
+                        <div class="collapsible-body codebox">
+                            /**
+                            * **********************************
+                            *                                  *
+                            * author: Gilles Vercammen * *
+                            ***********************************
+                            */
+                            import java.util.Scanner;
+
+                            public class Oefening1 {
+
+                            public static void main(String[] args) {
+
+                            double memberCost = 22;
+
+                            Scanner in = new Scanner(System.in);
+                            System.out.printf("Geef de naam van het lid: ");
+                            String name = in.next();
+                            System.out.printf("Geef aanvang lidjaar in: ");
+                            int memYear = in.nextInt();
+                            System.out.printf("Geef categorie (1,2,3) in: ");
+                            int category = in.nextInt();
+                            if (category == 1 || category == 2 || category == 3) {
+                            System.out.printf("Geef het aantal familieleden in club in: ");
+                            int relatedMembers = in.nextInt();
+                            if (category == 2) {
+                            memberCost = (memberCost/100)*80;
+                            } else
+                            if (category == 3) {
+                            memberCost = 40;
+                            }
+                            if ((2014 - memYear) > 10) {
+                            memberCost = (memberCost/100)*90;
+                            }
+                            if(relatedMembers == 1) {
+                            memberCost = (memberCost/100)*95;
+                            } else
+                            if(relatedMembers > 1) {
+                            memberCost = (memberCost/100)*90;
+                            }
+                            showMember(name,memYear,category,relatedMembers,memberCost);
+                            } else {
+                            System.out.println("Categorie " + category + " bestaat niet.");
+                            }
+                            }
+
+                            public static void showMember(String name, int memYear, int category, int relMembers, double cost) {
+                            cost = cost*100;
+                            cost = Math.round(cost);
+                            cost = cost/100;
+                            if(relMembers == 1) {
+                            System.out.printf("%s is lid sinds %d, behoort tot categorie %d en heeft %d familielid in de club.\n",name,memYear,category,relMembers);
+                            } else {
+                            System.out.printf("%s is lid sinds %d, behoort tot categorie %d en heeft %d familieleden in de club.\n",name,memYear,category,relMembers);
+                            }
+                            System.out.println("Te betalen = "+ cost);
+                            }
+                            }</div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="mdi-action-trending-neutral"></i>Oefening 2</div>
+                        <div class="collapsible-body codebox">
+                            /**
+                            * **********************************
+                            *                                  *
+                            * author: Gilles Vercammen * *
+                            ***********************************
+                            */
+                            import java.util.Scanner;
+
+                            public class Oefening2 {
+                            public static void main(String[] args) {
+                            String outputString = "";
+
+                            Scanner in = new Scanner(System.in);
+                            System.out.printf("Geef een positief getal in verschillende van nul: ");
+                            int waarde = in.nextInt();
+
+
+                            while(waarde != 1) {
+                            if((waarde%2) == 0){
+                            waarde /= 2;
+                            } else {
+                            waarde *= 3;
+                            waarde += 1;
+                            }
+                            String stringWaarde = Integer.toString(waarde);
+                            outputString = outputString + " " + stringWaarde;
+                            }
+                            System.out.printf("De getallenreeks is: \n");
+                            System.out.println(""+ outputString);
+                            }
+                            }</div>
+                    </li>
+                </ul>
+
+            </div>
+        </main>
+        <footer class="page-footer blue darken-3">
+            <div class="footer-copyright blue darken-2">
+                <div class="container">
+                    <span class="white-text">This website was made by Gilles Vercammen for the subject Webapplications I and got redone for the subject iTalent I</span>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    </body>
+</html>

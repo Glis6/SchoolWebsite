@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css" media="screen,projection"/>
+        <title>Portfolio | Contact</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    </head>
+
+    <body>
+        <header class="grey-text text-lighten-3">
+            <div class="navbar-fixed">
+                <ul id="taal" class="dropdown-content">
+                    <li id="taal" class="waves-effect"><a href="../nl/contact.html">Nederlands</a></li>
+                    <li id="taal" class="waves-effect active"><a href="">English</a></li>
+                </ul>
+                <ul id="overmij" class="dropdown-content">
+                    <li id="overmij" class="waves-effect"><a href="aboutme/personalinfo.html">Info</a></li>
+                    <li id="overmij" class="waves-effect"><a href="aboutme/cv.html">CV</a></li>
+                    <li id="overmij" class="waves-effect"><a href="aboutme/whatdoiwant.html">What do I want</a></li>
+                </ul>
+
+                <nav class="blue darken-3 z-depth-2">
+                    <div class="nav-wrapper ">
+                        <a id="logo" href="#" class="waves-effect brand-logo left">Gilles V.</a>
+                        <a href="#" data-activates="mobile-demo" class="button-collapse waves-effect"><i class="mdi-navigation-menu"></i></a>
+                        <ul class="brand-logo center hide-on-med-and-down">
+                            <li><a class="waves-effect" href="index.html">Home</a></li>
+                            <li><a class="waves-effect dropdown-button hide-on-med-and-down" data-activates="overmij">About me<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                            <li><a class="waves-effect" href="skills.html">Skills</a></li>
+                            <li><a class="waves-effect" href="collection.html">Collection</a></li>
+                            <li class="active"><a class="waves-effect">Contact</a></li>
+                        </ul>
+                        <a id="taal" class="dropdown-button brand-logo right hide-on-med-and-down" href="#!" data-activates="taal">English<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <ul class="side-nav" id="mobile-demo">
+                            <li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                        <a class="collapsible-header">Language<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a href="../nl/contact.html">Nederlands</a></li>
+                                                <li><a href="#">English</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="blue darken-3 menu">Menu</li>
+                            <li><a class="waves-effect" href="index.html">Home</a></li><li class="no-padding">
+                                <ul class="collapsible collapsible-accordion">
+                                    <li>
+                                        <a class="collapsible-header">About me<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                                        <div class="collapsible-body">
+                                            <ul>
+                                                <li><a href="aboutme/personalinfo.html">Info</a></li>
+                                                <li><a href="aboutme/cv.html">CV</a></li>
+                                                <li><a href="aboutme/whatdoiwant.html">What do I want</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="waves-effect" href="skills.html">Skills</a></li>
+                            <li class="active"><a class="waves-effect" href="collection.html">Collection</a></li>
+                            <li><a class="waves-effect" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container row">
+                <article class="col s12 l3 card grey lighten-5">
+                    <div class="kaart">
+                        <h4>Contact</h4>
+                        <p>This contactform is in connection with my e-mail address. If you fill in something here I will get it as an e-mail via the webserver.</p>
+                    </div>
+                </article>
+                <div class="col s1"><p></p></div>
+                <article class="col s12 l8 card grey lighten-5 gray-text">
+                    <div class="kaart">
+                        <div class="row">
+                            <form class="col s12" action="mailto:gillesv@live.be" method="post">
+                                <div class="row">
+                                    <div class="input-field col s6">
+                                        <i class="mdi-action-account-circle prefix"></i>
+                                        <input id="voornaam" type="text" class="validate blue-text darken-3" name="voornaam">
+                                        <label for="voornaam">First name</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input id="achternaam" type="text" class="validate blue-text darken-3" name="achternaam">
+                                        <label for="achternaam">Last name</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="mdi-communication-email prefix"></i>
+                                        <input id="email" type="email" class="validate blue-text darken-3" name="email">
+                                        <label for="email">E-mail</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="mdi-communication-phone prefix"></i>
+                                        <input id="tel" type="tel" class="validate blue-text darken-3" name="tel">
+                                        <label for="tel">Telephone number</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <i class="mdi-editor-mode-edit prefix"></i>
+                                        <textarea id="icon_prefix2" class="materialize-textarea blue-text darken-3" name="message"></textarea>
+                                        <label for="icon_prefix2">Message</label>
+                                    </div>
+                                </div>
+
+                                <button class="btn waves-effect waves-light blue-grey" type="submit">Send
+                                    <i class="mdi-content-send right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
+            </div> 
+        </main>
+        <footer class="page-footer blue darken-3">
+            <div class="footer-copyright blue darken-2">
+                <div class="container">
+                    <span class="white-text">This website was made by Gilles Vercammen for the subject Webapplications I and got redone for the subject iTalent I</span>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    </body>
+</html>
